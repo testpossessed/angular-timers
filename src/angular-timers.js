@@ -6,6 +6,11 @@
     tmrsvc.DelayTimer = function(delayMilliseconds) {
         var delay  = delayMilliseconds, running = false, handle;
         this.start = function(code) {
+            if(this.isRunning())
+            {
+                throw new Error('Cannot start a timer that is already running.');
+            }
+
             if(!code || typeof code !== 'function') {
                 throw new Error('A valid function to execute is required by start.');
             }
@@ -42,6 +47,11 @@
     tmrsvc.RepeatingTimer = function(intervalMilliseconds) {
         var interval = intervalMilliseconds, running = false, handle;
         this.start = function(code){
+            if(this.isRunning())
+            {
+                throw new Error('Cannot start a timer that is already running.');
+            }
+
             if(!code || typeof code !== 'function') {
                 throw new Error('A valid function to execute is required by start.');
             }

@@ -77,6 +77,14 @@ describe('DelayTimer', function() {
             }).toThrowError('A valid function to execute is required by start.')
         });
 
+        it('Should throw an error on attempt to start a running timer', function() {
+            var timer = new tmrsvc.DelayTimer(2000);
+            timer.start(function(){});
+            expect(function(){
+                timer.start(function(){});
+            }).toThrowError('Cannot start a timer that is already running.');
+        });
+
         it('Should report the timer is running when possible', function() {
             timer.setDelay(2000);
             timer.start(function (){});
