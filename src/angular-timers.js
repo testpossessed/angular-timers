@@ -115,6 +115,6 @@
     }
 
     if(typeof angular !== 'undefined') {
-        angular.module('timerService', [tmrsvc.TimerService]);
+        angular.module('anguler-timers', []).service('timerService', [tmrsvc.TimerService]);
     }
 })();
