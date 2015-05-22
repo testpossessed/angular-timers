@@ -1,0 +1,28 @@
+{
+  "name": "angular-timers",
+  "version": "1.0.0",
+  "homepage": "https://github.com/testpossessed/angular-timers",
+  "authors": [
+    "Mike Hanson <mike@testpossessed.com>"
+  ],
+  "description": "An angular service that acts as a factory for creating testable timer objects",
+  "main": "dist/angular-timers.min.js",
+  "keywords": [
+    "angular",
+    "timers",
+    "timeout",
+    "delay",
+    "interval"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "specs",
+    "src",
+    "Karma",
+    "package.json",
+    "karma.conf.js",
+    "gruntfile.js"
+  ]
+}
