@@ -21,6 +21,7 @@
     "specs",
     "src",
     "Karma",
+    ".idea",
     "package.json",
     "karma.conf.js",
     "gruntfile.js"
